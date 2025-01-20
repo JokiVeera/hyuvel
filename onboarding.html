@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Onboarding</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="onboarding-slide active">  
+        <img src="slide1.png" alt="Slide 1">  
+        <h2>Welcome to Hyuvel</h2>  
+        <p>Your AI-powered writing assistant</p>  
+    </div>  
+    <div class="onboarding-slide">  
+        <img src="slide2.png" alt="Slide 2">  
+        <h2>Discover Daily Inspiration</h2>  
+        <p>Get motivated with daily quotes and tips</p>  
+    </div>  
+    <div class="onboarding-slide">  
+        <img src="slide3.png" alt="Slide 3">  
+        <h2>Manage Your Writing Projects</h2>  
+        <p>Organize and edit your writing projects easily</p>  
+    </div>  
+    <div class="onboarding-buttons">  
+        <button class="sign-in-btn" onclick="window.location.href='sign_in.html'">Sign In</button>  
+        <button class="sign-up-btn" onclick="window.location.href='sign_up.html'">Sign Up</button>  
+    </div>  
+    <script>  
+        const slides = document.querySelectorAll('.onboarding-slide');  
+        let currentSlide = 0;  
+  
+        function showSlide(index) {  
+            slides.forEach((slide, i) => {  
+                slide.classList.toggle('active', i === index);  
+            });  
+        }  
+  
+        setInterval(() => {  
+            currentSlide = (currentSlide + 1) % slides.length;  
+            showSlide(currentSlide);  
+        }, 3000);  
+    </script>  
+</body>  
+</html>  

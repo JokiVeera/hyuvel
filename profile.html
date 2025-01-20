@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Profile</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="profile-tabs">  
+            <button class="active" onclick="showProfileTab('profile')">Profile</button>  
+            <button onclick="showProfileTab('about-us')">About Us</button>  
+            <button onclick="showProfileTab('faq')">FAQ</button>  
+        </div>  
+        <div id="profile" class="profile-content active">  
+            <h3>Profile</h3>  
+            <p>Nama: John Doe</p>  
+            <p>Email: johndoe@example.com</p>  
+            <p>Alamat: Jl. Contoh No. 123</p>  
+            <button onclick="window.location.href='edit_profile.html'">Edit</button>  
+        </div>  
+        <div id="about-us" class="profile-content">  
+            <h3>About Us</h3>  
+            <p>PT Jyn adalah perusahaan yang berfokus pada pengembangan teknologi kecerdasan buatan untuk membantu penulis.</p>  
+            <p>Alamat: Jl. Teknologi No. 456</p>  
+            <p>Telepon: +62 123 456 7890</p>  
+            <button onclick="window.location.href='feedback.html'">Give Feedback</button>  
+        </div>  
+        <div id="faq" class="profile-content">  
+            <h3>FAQ</h3>  
+            <div class="faq-item" onclick="toggleFAQ(this)">  
+                <h4>Apa itu Hyuvel?</h4>  
+                <p>Hyuvel adalah aplikasi yang menyediakan editor otomatis berbasis kecerdasan buatan yang mampu mendeteksi kesalahan tata bahasa, ejaan, dan gaya penulisan secara instan.</p>  
+            </div>  
+            <div class="faq-item" onclick="toggleFAQ(this)">  
+                <h4>Bagaimana cara menggunakan Hyuvel?</h4>  
+                <p>Unduh aplikasi Hyuvel dari App Store atau Play Store, lalu sign in atau sign up. Mulailah menulis atau mengedit proyek penulisan Anda dengan dukungan AI.</p>  
+            </div>  
+            <!-- Add more items as needed -->  
+        </div>  
+    </div>  
+    <div class="footer">  
+        <button onclick="window.location.href='home.html'">Home</button>  
+        <button onclick="window.location.href='write.html'">Write</button>  
+        <button onclick="window.location.href='community.html'">Community</button>  
+        <button onclick="window.location.href='profile.html'">Profile</button>  
+    </div>  
+    <script>  
+        function showProfileTab(tabId) {  
+            const tabs = document.querySelectorAll('.profile-tabs button');  
+            const contents = document.querySelectorAll('.profile-content');  
+  
+            tabs.forEach(tab => tab.classList.remove('active'));  
+            contents.forEach(content => content.classList.remove('active'));  
+  
+            document.getElementById(tabId).classList.add('active');  
+            document.querySelector(`#${tabId}`).classList.add('active');  
+        }  
+  
+        function toggleFAQ(item) {  
+            item.classList.toggle('active');  
+        }  
+    </script>  
+</body>  
+</html>  

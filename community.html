@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Community</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="community-tabs">  
+            <button class="active" onclick="showTab('discover')">Discover</button>  
+            <button onclick="showTab('my-content')">My Content</button>  
+        </div>  
+        <div id="discover" class="community-content active">  
+            <div class="card">  
+                <img src="book1.jpg" alt="Book 1">  
+                <h4>Judul Buku 1</h4>  
+                <p>Jenis Buku: Novel</p>  
+            </div>  
+            <div class="card">  
+                <img src="book2.jpg" alt="Book 2">  
+                <h4>Judul Buku 2</h4>  
+                <p>Jenis Buku: Ensai</p>  
+            </div>  
+            <!-- Add more items as needed -->  
+        </div>  
+        <div id="my-content" class="community-content">  
+            <div class="card">  
+                <img src="mybook1.jpg" alt="My Book 1">  
+                <h4>Judul Buku Saya 1</h4>  
+                <p>Jenis Buku: Novel</p>  
+            </div>  
+            <div class="card">  
+                <img src="mybook2.jpg" alt="My Book 2">  
+                <h4>Judul Buku Saya 2</h4>  
+                <p>Jenis Buku: Ensai</p>  
+            </div>  
+            <!-- Add more items as needed -->  
+        </div>  
+    </div>  
+    <div class="footer">  
+        <button onclick="window.location.href='home.html'">Home</button>  
+        <button onclick="window.location.href='write.html'">Write</button>  
+        <button onclick="window.location.href='community.html'">Community</button>  
+        <button onclick="window.location.href='profile.html'">Profile</button>  
+    </div>  
+    <script>  
+        function showTab(tabId) {  
+            const tabs = document.querySelectorAll('.community-tabs button');  
+            const contents = document.querySelectorAll('.community-content');  
+  
+            tabs.forEach(tab => tab.classList.remove('active'));  
+            contents.forEach(content => content.classList.remove('active'));  
+  
+            document.getElementById(tabId).classList.add('active');  
+            document.querySelector(`#${tabId}`).classList.add('active');  
+        }  
+    </script>  
+</body>  
+</html>  

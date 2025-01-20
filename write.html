@@ -1,0 +1,48 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Write</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="write-header">  
+            <img src="logo.png" alt="Hyuvel Logo">  
+            <button onclick="window.location.href='home.html'">Home</button>  
+        </div>  
+        <div class="write-project-list">  
+            <h3>Your Writing Projects</h3>  
+            <div class="horizontal-scroll">  
+                <div class="horizontal-scroll-item" onclick="window.location.href='editor.html'">  
+                    <img src="project1.jpg" alt="Project 1">  
+                    <h4>Project 1</h4>  
+                    <p>Fantasy Novel</p>  
+                </div>  
+                <div class="horizontal-scroll-item" onclick="window.location.href='editor.html'">  
+                    <img src="project2.jpg" alt="Project 2">  
+                    <h4>Project 2</h4>  
+                    <p>Science Fiction</p>  
+                </div>  
+                <div class="horizontal-scroll-item" onclick="window.location.href='editor.html'">  
+                    <img src="project3.jpg" alt="Project 3">  
+                    <h4>Project 3</h4>  
+                    <p>Mystery</p>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="write-editor">  
+            <button onclick="window.location.href='editor.html'">New Project</button>  
+            <textarea placeholder="Start writing your new project here..."></textarea>  
+            <button>Save</button>  
+        </div>  
+    </div>  
+    <div class="footer">  
+        <button onclick="window.location.href='home.html'">Home</button>  
+        <button onclick="window.location.href='write.html'" class="active">Write</button>  
+        <button onclick="window.location.href='community.html'">Community</button>  
+        <button onclick="window.location.href='profile.html'">Profile</button>  
+    </div>  
+</body>  
+</html>  
